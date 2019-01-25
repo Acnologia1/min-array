@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr1 =[0];
+    var n =prompt("nhap so phan tu cua mang",0);
+    var b =0;
+    for(var i =0;i<n;i++)
+    {
+        var j = i+1;
+        b = prompt(('Nhập phần tử thứ'+j+'='),0);
+        arr1[i] =b;
+    }
+    var min =minArray(arr1);
+    alert(min);
+
+
+    function minArray(arr){
+        //Neu do dai mang = 0 thi return -1
+        if(arr.length == 0)
+            return -1;
+        var min = arr[0];
+
+        for(var i =1; i<arr.length;i++){
+            if(arr[i] <min){
+                min =arr[i];
+            }
+        }return min;
+    }
+</script>
+</body>
+</html>
